@@ -10,6 +10,13 @@ class WaltsController < ApplicationController
 
     def index
         @walts = Walt.all
+        if params[:tag_ids]
+          @walts = []
+          params[:tag_ids].each do |key, value|      
+            @walts += Tag.find_by(name: key).walts if value == "1"
+          end
+          @walts.uniq!
+        end
     end
 
     def new
@@ -51,7 +58,7 @@ class WaltsController < ApplicationController
       private
 
       def walt_params
-        params.require(:walt).permit(:title, :image, :about, :overall)
+        params.require(:walt).permit(:title, :image, :about, :overall, tag_ids: [])
       end
 
 end

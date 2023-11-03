@@ -5,6 +5,8 @@
   <%= image_tag @walt.image_url, size: "250x200" if @walt.image? %>
   <p><%= @walt.created_at %></p>
 </div>
-
+<% @walt.tags.each do |tag| %>
+  <span><%= tag.name %></span>
+<% end %>
 <%= link_to "一覧に戻る", walts_path %>
 <%= link_to "編集する", edit_walt_path(@walt.id) %>

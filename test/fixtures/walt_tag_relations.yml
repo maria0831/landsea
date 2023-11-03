@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  walt: one
+  tag: one
+
+two:
+  walt: two
+  tag: two
