@@ -1,0 +1,12 @@
+
+<%= form_for @walt do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, :size => 140 %> 
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <%= f.label :about %>
+    <%= f.text_field :about, :size => 140 %>
+  </div>
+    <%= f.submit "編集する" %>
+<% end %>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Landsea</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <h1>Landsea</h1>
+<h3>
+  <%= link_to 'top', :controller => "walts", :action => "top" %>
+
+  <%= link_to 'ランド', :controller => "walts", :action => "land" %>
+  <%= link_to 'シー', :controller => "walts", :action => "sea" %>
+</h3>
+    <%= yield %>
+  </body>
+</html>
