@@ -1,6 +1,9 @@
-landsea
-<%= link_to 'ランド！', :controller => "walts", :action => "land" %>
-<%= link_to "口コミへ", new_walt_path %>
+<body class="renga">
+
+<%= link_to new_walt_path do %>
+  <div class="sinki">post</div>
+<% end %>
+
 
 <%= form_tag({controller:"walts",action:"index"}, method: :get) do %>
   <% Tag.all.each do |t| %>
@@ -11,31 +14,15 @@ landsea
 
 <div class="walts-container">
   <% @walts.each do |t| %>
-  <br>
-
-<h2>おすすめ度：
-   <span class="star-rating">
-     <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
-     <span class="star-rating-back">★★★★★</span>
-   </span> 
-</h2>
-
-    <div class="walt">
-      <p><%= t.title %></p>
+    <%= link_to walt_path(t.id) do %>
+      <div class="toukou">  
       <p><%= image_tag t.image_url, size: "250x200" if t.image? %></p>
-      <p><%= t.about %></p>
-   
-      <p><%= t.created_at %></p>
-      <%= link_to "詳細へ", walt_path(t.id) %> 
-      <%= link_to "編集する", edit_walt_path(t.id) %>
-      <%= button_to "削除する", walt_path(t.id), method: :delete %> 
-    </div>
-    <br>
-
+      </div>
+    <% end %>
   <% end %>
-  </div>
+</div>
 
 
-
+</body>
 
 

@@ -14,4 +14,124 @@
  *= require_self
  */
 
+ a {
+    color: #333; /* リンクの色 */
+    text-decoration: none; /* アンダーラインを削除 */
+    transition: color 0.3s; /* ホバーアニメーションのトランジションを設定 */
+  }
+a:hover {
+    color: #00ffb3; /* ホバー時のリンクの色 */
+  }
+
+
+
+/* ここから下がハンバーガーメニューに関するCSS */
+  
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+    display: none;
+  }
+  
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+    margin-left: 95%;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+    
+  }
+
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+    background: #fff;
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background: #fff;
+  }
+/* メニューのデザイン*/
+.nav_content {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    transition: .5s;
+  }
+  
+  /* メニュー黒ポチを消す */
+  .nav_list {
+    list-style: none;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    background: linear-gradient(to top, rgba(241, 224, 241, 0.356) 0%, rgba(123, 226, 240, 0.082) 100%),url(hana.png);  
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .nav_item a {
+    color: rgb(20, 1, 1);
+    border-bottom: 1px solid rgb(197, 194, 248);
+    cursor: pointer;
+    transition: 0.2s; 
+  }
+.nav_item a:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transform: rotateX(360deg);
+  }
+
+
+  .nav_item {
+    padding: 2%;
+    margin: 4%;
+  }
+  
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked ~ .nav_content {
+    left: 0;/* メニューを画面に入れる */
+  }
  
+  

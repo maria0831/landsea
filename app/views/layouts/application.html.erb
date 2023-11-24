@@ -11,13 +11,25 @@
   </head>
 
   <body>
-  <h1>Landsea</h1>
-<h3>
-  <%= link_to 'top', :controller => "walts", :action => "top" %>
+  <%= link_to walts_top_path do %>
+    <h1>Landsea</h1>
+  <% end %>
+  
+<div class="nav">
+<input id="drawer_input" class="drawer_hidden" type="checkbox">
+<label for="drawer_input" class="drawer_open"><span></span></label>
+<nav class="nav_content">
+  <ul class="nav_list">
+    <li class="nav_item"><%= link_to "口コミへ", walts_path %>
+    </li>
+    <li class="nav_item"><%= link_to 'ランド', :controller => "walts", :action => "land" %>
+    </li>
+    <li class="nav_item">  <%= link_to 'シー', :controller => "walts", :action => "sea" %>
+    </li>
+  </ul>
+</nav>
+</div>
 
-  <%= link_to 'ランド', :controller => "walts", :action => "land" %>
-  <%= link_to 'シー', :controller => "walts", :action => "sea" %>
-</h3>
     <%= yield %>
   </body>
 </html>

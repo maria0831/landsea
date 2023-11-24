@@ -20,7 +20,8 @@ class WaltsController < ApplicationController
     end
 
     def new
-        @walt = Walt.new  
+        @walt = Walt.new 
+         
     end
 
     def create
@@ -34,6 +35,7 @@ class WaltsController < ApplicationController
 
       def show
         @walt = Walt.find(params[:id])
+
       end
 
       def edit

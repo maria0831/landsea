@@ -1,5 +1,33 @@
-ふぁんたぎー
-ついーん
-つおのろ０
-<%= link_to 'ランド', :controller => "walts", :action => "land" %>
-<%= link_to 'シー', :controller => "walts", :action => "sea" %>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="walts.css">
+</head>
+<body class="top">
+
+<div class="walts-top">
+        <%= link_to walts_sea_path do %>
+          <div class="section1">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          </div>
+        <% end %>
+        <%= link_to walts_land_path do %>
+          <div class="section2">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          </div>
+        <% end %>
+
+        <div class="top_center">  
+           <br>
+          <p>～東京ディズニーリゾートの本当の魅力をお届け～</p>
+        </div>
+</div>
+
+</body>

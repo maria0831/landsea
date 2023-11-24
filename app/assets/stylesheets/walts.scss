@@ -1,8 +1,6 @@
 // Place all the styles related to the walts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
-
 .lecture_form{
     display: flex;
     flex-direction: column;
@@ -14,9 +12,7 @@
     width: 200px;
     margin-bottom: 30px;
   }
-
 /*　以下新規投稿ページの星用のCSS　*/
-
   .post_form{
     display: flex;
     flex-direction: row-reverse;
@@ -46,10 +42,7 @@
   .post_form input[type='radio']:checked ~ label{
     color: #ffcc00;
   }
-
-
 /*　以下一覧ページの星用のCSS　*/
-
   .star-rating {
     position: relative;
     display: inline-block;
@@ -70,3 +63,127 @@
     color: #ccc;
 
   }
+.top{
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.664) 20%,rgba(255,255,255,0.5) 30%,rgba(255, 255, 255, 0.274) 70%,rgba(255, 255, 255, 0) 100%),url(Map.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+}
+.walts-container{
+  display: flex;
+  margin: 1%;
+  flex-wrap: wrap;
+  width: auto;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+.toukou{
+  margin: 2%;
+  transition: 0.2s;
+  cursor: pointer;
+  width: 250px;
+  height: 200px;
+  background-color: beige;
+}
+.toukou :hover{
+  transform: scale(1.1, 1.1);
+  background-color: aquamarine;
+}
+.post_form{
+  margin: 2%;
+  border: #ccc;
+  white-space: nowrap;
+}
+.top_center{
+  position: absolute;
+  text-align: center;
+  margin-top: 15%;  
+  margin-right: 40%;
+  margin-left: 33%;
+  margin-bottom: 20%;
+  z-index: 1;
+  font-size: larger;
+  width: 500px;
+}
+.walts-land{
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 20%,rgba(255,255,255,0.5) 30%,rgba(255, 255, 255, 0.5) 70%,rgba(255, 255, 255, 0.5) 100%),url(land_map.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+}
+.walts-sea{
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 20%,rgba(255,255,255,0.5) 30%,rgba(255, 255, 255, 0.5) 70%,rgba(255, 255, 255, 0.5) 100%),url(sea_map.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+}
+.renga{
+  background-image: url(white.jpg);
+  background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(#fff, 0.5);
+    background-blend-mode: overlay;
+}
+.walt_form{
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 500px;
+  width: 500px;
+  margin-left: 35%;
+  background-image: url(hana.png);
+}
+.walts-top{
+  display: flex;
+  position:relative;
+}
+.section1{
+  padding-right: 700px;
+	left:0px;
+	height:600px;
+  background-color: #e9cf7f00;
+}
+.section1:hover{
+  transform:  scale(1.03);
+  transition:all 1.2s ease;
+  border-radius: 1000px;
+  background-color: rgba(245, 247, 247, 0.637);
+}
+.section2{
+  padding-left: 700px;
+	right:0px;
+	height:600px;
+  background-color: rgba(110, 166, 216, 0);
+}
+.section2:hover{
+  transform:  scale(1.03);
+  transition: all 1.2s ease;
+  border-radius: 1000px;
+  background-color: rgba(245, 247, 247, 0.685);
+}
+
+.walt_new{
+  background-color: #ffcc00;
+}
+
+.sinki{
+  font-size: large;
+  text-align: center;
+  background-color: rgba(43, 42, 29, 0.295);
+  background-image: url(post.png);
+  height: 15%;
+  width: 10%;
+  margin-left: 90%;
+  border: 3px solid black;
+  border-radius: 2000%;
+}
+
+ 

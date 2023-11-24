@@ -1,17 +1,18 @@
+<body class="walt_new">
+
+<div class="walt_form">
 <%= form_for @walt do |f| %>
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title, :size => 140 %>
+    <p><%= f.label :title %>
+    <%= f.text_field :title, :size => 70 %>
 
-    <%= f.label :image %><br>
+    <p><%= f.label :image %>
     <%= f.file_field :image %>
 
-
-    <%= f.label :about %>
-    <%= f.text_field :about, :size => 140 %>
+    <p><%= f.label :about %>
+    <%= f.text_field :about, :size => 70 %>
 
   </div>
-  <div class="walt_form">
 
   <div class="post_form">
    <%= f.radio_button :overall, 5 ,id: 'star1'%>
@@ -30,7 +31,6 @@
    <label for="star5"><span class="text">最悪</span>★</label>
  </div>
 
-</div>
 <div class='form-group'>
         <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
             <div class='form-check'>
@@ -43,7 +43,8 @@
     </div>
   <%= f.submit "post" %>
 <% end %>
+</div>
 <%= link_to "一覧へ", walts_path %>
 
-
+</body>
  
