@@ -1,6 +1,6 @@
 databases:
   - name: landsea_db
-    databaseName: landsea_db
+    databaseName: landsea_db_czy4
     user: landsea
     region: singapore
 
